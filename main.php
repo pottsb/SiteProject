@@ -1,6 +1,6 @@
 <?
 include "conf/sqlconf.php";
-$sql = "SELECT title, imgurl, message, author, date FROM posts ORDER BY ID desc";
+$sql = "SELECT title, imgurl, message, author, date FROM posts ORDER BY date DESC, ID DESC";
 $result = $conn->query($sql);
 ?>
 <html>
@@ -22,31 +22,40 @@ $result = $conn->query($sql);
 			<?php include "includes/widgets.php" ?>
 			<div class="contentContainer">
 				<?
+				$postsperpage = 5;
+				$rownum = 1;
+				if ($_GET['page'] == null){$pagenum = 1;} else{$pagenum = $_GET['page'];}
+				$postnumstart = ($pagenum * $postsperpage - ($postsperpage-1));
+				$postnumend = ($pagenum * $postsperpage);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
-						echo '
-						<div class="postContainer">
-							<div class ="postTitle">
-							<h2> '. $row["title"] .' </h2>
+						if($rownum >= $postnumstart and $rownum  <= $postnumend) {
+							//if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
+							echo '
+							<div class="postContainer">
+								<div class ="postTitle">
+								<h2> '. $row["title"] .' </h2>
+								</div>
+								<div class="postImage"   >
+								<a href="'. $row["imgurl"] .'"><img src="'. $row["imgurl"] .'"></a>
+								</div>
+								<div class="postContent">
+								<p>'. $row["message"].'</p>
+								</div>
+								<div class="postFooter">
+								<p>Author:  '. $row["author"].'  - Date:  '. $row["date"].'</p>
+								</div>
 							</div>
-							<div class="postImage"   >
-							<a href="'. $row["imgurl"] .'"><img src="'. $row["imgurl"] .'"></a>
-							</div>
-							<div class="postContent">
-							<p>'. $row["message"].'</p>
-							</div>
-							<div class="postFooter">
-							<p>Author:  '. $row["author"].'  - Date:  '. $row["date"].'</p>
-							</div>
-						</div>
-						';
+							';
+						}
+						$rownum++;
 					}
 				} else {
 				  echo "0 results";
 				}
+				include "includes/pagenav.php"
 				?>
-
+			
 			</div>
 		</div>
 		<?php include "includes/footer.php" ?>

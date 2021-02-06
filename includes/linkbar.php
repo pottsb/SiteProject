@@ -4,5 +4,5 @@
 		<li><a href="admin/manageposts.php">Site Admin</a></li>
 		<li><a href="#">Link3</a></li>
 		<li><a href="#">Link4</a></li>
-	</ul
+	</ul>
 </div>
