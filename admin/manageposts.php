@@ -1,35 +1,38 @@
 <?
 include "../conf/sqlconf.php";
-$sql = "SELECT id, title, imgurl, message, author, date FROM posts ORDER BY ID desc";
+include "../conf/mainconf.php";
+$sql = "SELECT id, title, imgurl, message, author, date FROM posts ORDER BY date DESC, ID DESC";
 $result = $conn->query($sql);
 ?>
 <html>
 <head>
 	<title>Site Admin</title>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="../style/style.css">
 	
 </head>
 <body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="../js/hideWidgets.js"></script>
-<script src="../js/index.js"></script>
+<script src="<?php print($sitePath)?>js/hideWidgets.js"></script>
+<script src="<?php print($sitePath)?>js/index.js"></script>
 	<div class="mainContainer">
 		<?php include "../includes/header.php" ?>
 		<?php include "includes/adminlinkbar.php" ?>
 		<div class="bodyContainer">
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
-								<table border = "1" cellpadding = "3">
+								<table cellpadding = "3" class="table">
 								<tbody>
 								<tr>
-								<td>Title</td>
-								<td>Image URL</td>
-								<td>Content</td>
-								<td>Author</td>
-								<td>Date</td>
+								<td><h4>Title</h4></td>
+								<td><h4>Image URL</h4></td>
+								<td><h4>Content</h4></td>
+								<td><h4>Author</h4></td>
+								<td><h4>Date</h4></td>
 								</tr>
 				<?
 				if ($result->num_rows > 0) {

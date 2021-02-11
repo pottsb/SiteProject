@@ -1,5 +1,6 @@
 <?
 include "conf/sqlconf.php";
+include "conf/mainconf.php";
 $sql = "SELECT title, imgurl, message, author, date FROM posts ORDER BY date DESC, ID DESC";
 $result = $conn->query($sql);
 ?>
@@ -7,13 +8,16 @@ $result = $conn->query($sql);
 <head>
 	<title>Home</title>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="style/style.css">
 	
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
+<script src="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/js/bootstrap.min.js" ></script>
 <script src="js/index.js"></script>
 	<div class="mainContainer">
 		<?php include "includes/header.php" ?>
@@ -22,11 +26,11 @@ $result = $conn->query($sql);
 			<?php include "includes/widgets.php" ?>
 			<div class="contentContainer">
 				<?
-				$postsperpage = 5;
-				$rownum = 1;
-				if ($_GET['page'] == null){$pagenum = 1;} else{$pagenum = $_GET['page'];}
-				$postnumstart = ($pagenum * $postsperpage - ($postsperpage-1));
-				$postnumend = ($pagenum * $postsperpage);
+				
+				$rownum = 0;
+				$pagenum = isset($_GET["page"]) ? $_GET["page"] : 1;
+				$postnumstart = (($pagenum * $postsperpage) - $postsperpage);
+				$postnumend = (($pagenum * $postsperpage)-1);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
 						if($rownum >= $postnumstart and $rownum  <= $postnumend) {
@@ -34,7 +38,7 @@ $result = $conn->query($sql);
 							echo '
 							<div class="postContainer">
 								<div class ="postTitle">
-								<h2> '. $row["title"] .' </h2>
+								<h2> '. $row["title"] .'</h2>
 								</div>
 								<div class="postImage"   >
 								<a href="'. $row["imgurl"] .'"><img src="'. $row["imgurl"] .'"></a>

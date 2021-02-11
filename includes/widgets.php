@@ -1,3 +1,3 @@
 <div class="widgetContainer">
-	widgets
+	widgets<?php print($sitePath)?>
 </div>

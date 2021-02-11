@@ -114,11 +114,14 @@
 .pagenavContainer {
 	background-color: red;
 	width: 100%;
-	height: 46px;
+	height: 76px;
 	border: 2px solid black;
 }
 
-
+.pagination{
+	display: flex;
+	justify-content: center;
+}
 
 
 
