@@ -11,11 +11,11 @@
         <?
         if($rownum > $postsperpage){ //more than 1 page
             
-            if($pagenum >= ($pagecount - 4)){// starts pages within 9 of the end at 10 from the end so they'll always be 10 pages to click
+            if($pagenum >= ($pagecount - 4)){// starts pages within x of the end at 10 from the end so they'll always be 10 pages to click
                 $s = $i = ($pagecount - 9);
             }
             elseif($pagenum >= 6){
-                $s = $i = ($pagenum - 4); //starts pages > 6 at page-4 so page 6 lists pages 2-11 and so on
+                $s = $i = ($pagenum - 4); //starts pages > x at page-4 so page 6 lists pages 2-11 and so on
             }
             else{
                 $s = $i = 1;
