@@ -38,7 +38,7 @@ $mydate=getdate();
 					
 					Post:<br>
 					<textarea name="message" class="form-control" rows="20" cols="105"></textarea><br>
-					<br>
+					
 					<div class="form-row">
 						<div>
 							Author: <input type="text" class="form-control" name="author">

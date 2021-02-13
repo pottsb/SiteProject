@@ -37,17 +37,20 @@ $result = $conn->query($sql);
 							//if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
 							echo '
 							<div class="postContainer">
-								<div class ="postTitle">
-								<h2> '. $row["title"] .'</h2>
+								<div class="card">
+
+
+								<div class="postImage">
+								<img class="card-img-top" src="'. $row["imgurl"] .'" alt="Card image cap">
 								</div>
-								<div class="postImage"   >
-								<a href="'. $row["imgurl"] .'"><img src="'. $row["imgurl"] .'"></a>
+								<div class="card-body">
+								  <h5 class="card-title">'. $row["title"] .'</h5>
+								  <h6 class="card-subtitle mb-2 text-muted">Author:  '. $row["author"].'  - Date:  '. $row["date"].'</h6>
+								  <p class="card-text">'. $row["message"].'</p>
+								  
 								</div>
-								<div class="postContent">
-								<p>'. $row["message"].'</p>
-								</div>
-								<div class="postFooter">
-								<p>Author:  '. $row["author"].'  - Date:  '. $row["date"].'</p>
+
+	
 								</div>
 							</div>
 							';
