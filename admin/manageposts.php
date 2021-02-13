@@ -35,29 +35,39 @@ $result = $conn->query($sql);
 								<td><h4>Date</h4></td>
 								</tr>
 				<?
+				$postsperpage = $postsperpage * 2;
+				$rownum = 0;
+				$pagenum = isset($_GET["page"]) ? $_GET["page"] : 1;
+				$postnumstart = (($pagenum * $postsperpage) - $postsperpage);
+				$postnumend = (($pagenum * $postsperpage)-1);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
-						if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
-						echo '
-									<tr>
-										<td> '. $row["title"] .' </td>
-										<td> '. $row["imgurl"] .'</td>
-										<td>'. substr($row["message"], 0, 200) .'... </td>
-										<td>'. $row["author"].' </td>
-										<td>'. $row["date"].' </td>
-										<td><form action="editpost.php" method="post"><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Edit"></form></td>
-										<td><form action="forminput/deletepost.php" method="post" ><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Delete">
-										</form></td>
-									</tr>
-						';
+						if($rownum >= $postnumstart and $rownum  <= $postnumend) {
+							if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
+							echo '
+										<tr>
+											<td> '. $row["title"] .' </td>
+											<td> '. $row["imgurl"] .'</td>
+											<td>'. substr($row["message"], 0, 200) .'... </td>
+											<td>'. $row["author"].' </td>
+											<td>'. $row["date"].' </td>
+											<td><form action="editpost.php" method="post"><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Edit"></form></td>
+											<td><form action="forminput/deletepost.php" method="post" ><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Delete">
+											</form></td>
+										</tr>
+							';
+						}
+						$rownum++;
 					}
 				} else {
 				  echo "0 results";
 				}
+				
 				?>
 								</tbody>
 							</table>
 			</div>
+			<? include "../includes/pagenav.php" ?>
 		</div>
 		<?php include "../includes/footer.php" ?>
 	</div>
