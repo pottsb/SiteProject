@@ -109,9 +109,21 @@
 	width: 90%;
 	margin: 0 auto;
 	background-color: grey;
+	overflow: hidden;
 }
 
-.pagenavContainer {
+.createPostFormCol{
+	width: 20%; 
+	float: left;
+	margin-right: 20px;
+	
+}
+
+.createPostFormRow{
+	
+}
+
+.pagenavContainer{
 	background-color: red;
 	width: 100%;
 	height: 76px;

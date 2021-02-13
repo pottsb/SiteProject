@@ -39,20 +39,17 @@ $mydate=getdate();
 					Post:<br>
 					<textarea name="message" class="form-control" rows="20" cols="105"></textarea><br>
 					
-					<div class="form-row">
-						<div>
+					
+						<div class="createPostFormCol">
 							Author: <input type="text" class="form-control" name="author">
 						</div>
-						<div>
+						<div class="createPostFormCol">
 							Date: <input type="text" class="form-control" name="date" value ="<?echo "$mydate[year]-$mydate[mon]-$mydate[mday]";?>">
 						</div>
-						<div>
+						<div class="createPostFormCol">
+							<br>
 							<button type="submit" class="btn btn-primary">Submit</button>
 						</div>
-						
-					</div>
-					
-					
 					
 					</form>
 				</div>
