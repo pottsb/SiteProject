@@ -11,13 +11,13 @@ $result = $conn->query($sql);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="style/style.css">
 	
 </head>
 <body>
 <script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
-<script src="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/js/bootstrap.min.js" ></script>
+<script src="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
 <script src="js/index.js"></script>
 	<div class="mainContainer">
 		<?php include "includes/header.php" ?>
@@ -34,18 +34,17 @@ $result = $conn->query($sql);
 				if ($result->num_rows > 0) {
 					while($row = $result->fetch_assoc()) {
 						if($rownum >= $postnumstart and $rownum  <= $postnumend) {
-							//if (!$row["imgurl"]){ $imgHidden = "hidden";} else{$imgHidden = "";}
+							$img = null;
+							if ($row["imgurl"]){ $img = '<div class="postImage"><a href="'. $row["imgurl"] .'"><img class="card-img-top" src="'. $row["imgurl"] .'" alt="Card image cap"></a></div>';}
 							echo '
 							<div class="postContainer">
 								<div class="card">
 
-
-								<div class="postImage">
-								<img class="card-img-top" src="'. $row["imgurl"] .'" alt="Card image cap">
-								</div>
+								'.$img.'
+								
 								<div class="card-body">
 								  <h5 class="card-title">'. $row["title"] .'</h5>
-								  <h6 class="card-subtitle mb-2 text-muted">Author:  '. $row["author"].'  - Date:  '. $row["date"].'</h6>
+								  <h6 class="card-subtitle mb-2 text-muted">Author:  '. $row["author"].'  |  Date:  '. $row["date"].'</h6>
 								  <p class="card-text">'. $row["message"].'</p>
 								  
 								</div>

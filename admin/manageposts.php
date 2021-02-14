@@ -11,12 +11,13 @@ $result = $conn->query($sql);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="../style/style.css">
 	
 </head>
 <body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
+<script src="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
 <script src="<?php print($sitePath)?>js/hideWidgets.js"></script>
 <script src="<?php print($sitePath)?>js/index.js"></script>
 	<div class="mainContainer">
