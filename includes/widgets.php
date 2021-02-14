@@ -4,7 +4,8 @@
 			<h4>Welcome!</h4>
 		</div>
 		<div class ="widgetContent">
-			<P>Thank you for your patience while we add information and get features working.</p>
+			<h4>Under Construction.</h4>
+			<P><b>Thank you</b> for your <u>patience</u> while we add <i>information</i> and get <i>features working.</i></p>
 		</div>
 	</div>
 	<div class="widget">

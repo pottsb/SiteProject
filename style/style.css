@@ -30,7 +30,7 @@
 	border: 2px solid black;
 }
 .contentContainer{
-	min-height: 400px;
+	min-height: 500px;
 	width: 75%;
 	padding-top: 30px;
 }
@@ -195,3 +195,28 @@ a:link {
   a:hover {
 	color: grey;
   }
+
+  .btn-primary {
+    color: #fff;
+    background-color: grey;
+    border-color: grey;
+}
+
+  .btn-primary:hover {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+.map-container{
+	overflow:hidden;
+	padding-bottom:56.25%;
+	position:relative;
+	height:0;
+	}
+	.map-container iframe{
+	left:0;
+	top:0;
+	height:300px;
+	width:100%;
+	position:absolute;
+	}
