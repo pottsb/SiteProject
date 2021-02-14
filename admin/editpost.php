@@ -30,7 +30,9 @@ $row = $result->fetch_assoc();
 		<div class="bodyContainer">
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
+			
 				<div class="createPostFormContainer">
+				<h2>Edit Post</h2>
 					<form action="forminput/editpost.php" method="post" target="_self">
 					Title:<br>
 					<input type="text" name="title" class="form-control" size="97" value ="<?echo $row["title"];?>">

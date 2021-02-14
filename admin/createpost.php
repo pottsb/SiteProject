@@ -27,7 +27,9 @@ $mydate=getdate();
 		<div class="bodyContainer">
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
+			
 				<div class="createPostFormContainer">
+				<h2>Create Post</h2>
 					<form action="forminput/createpost.php" method="post" target="_self">
 					Title:<br>
 					<input type="text" name="title" class="form-control" size="97">

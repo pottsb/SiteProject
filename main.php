@@ -23,6 +23,19 @@ $result = $conn->query($sql);
 		<?php include "includes/header.php" ?>
 		<?php include "includes/linkbar.php" ?>
 		<div class="bodyContainer">
+		<div class="carouselContainer" data-bs-ride="carousel">
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img src="http://lamp-cli.svr0.local/SiteProject/images/urbex/IMG_4636.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="http://lamp-cli.svr0.local/SiteProject/images/urbex/IMG_2726.jpg" class="d-block w-100">
+				</div>
+				<div class="carousel-item">
+					<img src="http://lamp-cli.svr0.local/SiteProject/images/urbex/IMG_1194.jpg" class="d-block w-100">
+				</div>
+			</div>
+		</div>
 			<?php include "includes/widgets.php" ?>
 			<div class="contentContainer">
 				<?

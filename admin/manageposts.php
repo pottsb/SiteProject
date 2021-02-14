@@ -26,6 +26,7 @@ $result = $conn->query($sql);
 		<div class="bodyContainer">
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
+			<h2>Manage Posts</h2>
 								<table cellpadding = "3" class="table">
 								<tbody>
 								<tr>
