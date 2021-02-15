@@ -132,8 +132,11 @@
 .createPostFormContainer{
 	width: 90%;
 	margin: 0 auto;
+	padding-left: 10px;
+	padding-right: 10px;
 	overflow: hidden;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	padding-bottom: 10px
 }
 
 .createPostFormCol{
@@ -179,7 +182,9 @@
 .footerCollumn{
 	width: 33.33%;
 	float: left;
-	padding: 20px;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 }
 
 body{
@@ -214,7 +219,6 @@ a:link {
 }
 .map-container{
 	overflow:hidden;
-	padding-bottom:56.25%;
 	position:relative;
 	height:0;
 	}
@@ -225,3 +229,22 @@ a:link {
 	width:100%;
 	position:absolute;
 	}
+
+.sociallink{
+	padding-bottom:10px;
+}
+
+.postColContainer {
+	height: 200px;
+	background-color: #f1f1f1;
+	width: 100%;
+	bottom-padding: 10px;
+}
+.postCollumn{
+	width: 33.33%;
+	float: left;
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
