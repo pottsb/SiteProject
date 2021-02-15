@@ -27,6 +27,7 @@ $result = $conn->query($sql);
 			<div class="contentContainer">
 			<div class="createPostFormContainer">
 				<h2>About</h2>
+				<hr>
 			Aliquam vel molestie eros. Integer ut mollis lectus, et fringilla justo. Fusce ornare accumsan ante, non tincidunt massa iaculis at. Suspendisse ultrices nulla ac vestibulum pellentesque. Ut blandit tempor tortor et porta. In lacinia mi lacus, posuere rutrum risus pharetra nec. Quisque nec convallis metus, sed vulputate enim. Nunc aliquet lobortis semper. Sed a semper urna. In nec elit porta, convallis risus vitae, lacinia felis. Aliquam placerat, nunc quis sollicitudin porttitor, erat lacus ornare ligula, nec congue orci risus id est. Sed mollis, enim ac dapibus tempus, neque ex facilisis elit, eu sagittis est mi at leo. Vestibulum lectus lacus, porttitor eu sodales eget, viverra et justo. Phasellus varius iaculis urna eu aliquam. Morbi porttitor laoreet magna, quis eleifend sem tincidunt in. Nunc quis mauris at turpis porttitor imperdiet eget vel purus.
 </div>
 			</div>

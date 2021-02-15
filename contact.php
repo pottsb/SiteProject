@@ -36,18 +36,18 @@ $result = $conn->query($sql);
 				</div>
 				<div class="postColContainer">
 					<div class="postCollumn">
-						<div class="sociallink"><img src="http://lamp-cli.svr0.local/SiteProject/images/icons/mappin.png" height="35"></div>
+						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/mappin.png" height="35"></div>
 						<p>University of Derby<br>
 						Kedleston Rd<br>
 						Derby DE22 1GB</p>
 					</div>
 					<div class="postCollumn">
-						<div class="sociallink"><img src="http://lamp-cli.svr0.local/SiteProject/images/icons/phone.png" height="35"></div>
+						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/phone.png" height="35"></div>
 						<p>01332 123456<br>
 						071234567</p>
 					</div>
 					<div class="postCollumn">
-						<div class="sociallink"><img src="http://lamp-cli.svr0.local/SiteProject/images/icons/email.png" height="35"></div>
+						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/email.png" height="35"></div>
 						<p>hello@company.tld<br>
 						sales@company.tld</p>
 					</div>
@@ -58,7 +58,7 @@ $result = $conn->query($sql);
 					<h2>Drop us a message?</h2>
 					<hr>
 					Message:<br>
-					<textarea name="message" class="form-control" rows="10" required></textarea><br>
+					<textarea name="message" class="form-control" rows="10" required></textarea>
 					<div class="valid-feedback">
 					Looks good!
 					</div>
@@ -66,7 +66,7 @@ $result = $conn->query($sql);
 					Please enter your message.
 					</div>
 					
-					
+					<br>
 					<div class="createPostFormCol">
 						Name: <input type="text" class="form-control" id="name" name="name" required>
 						<div class="valid-feedback">
