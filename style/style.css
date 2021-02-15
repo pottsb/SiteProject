@@ -248,3 +248,8 @@ a:link {
 	padding-right: 20px;
 	text-align: center;
 }
+#profilePicture {
+	border-radius: 50%;
+	border: #111 1px;
+	width: 200px;
+  }
