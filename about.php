@@ -32,34 +32,34 @@ $result = $conn->query($sql);
 					<h2>Who we are</h2>
 					<hr>
 					<div class="postColContainer">
-						<div class="postCollumn">
+						<div class="postCollumn3">
 							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar2.png" id="profilePicture"></div>
 							<h5>CEO</h5>
 							<p>Person 1</p>
 						</div>
-						<div class="postCollumn">
+						<div class="postCollumn3">
 						<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar.png" id="profilePicture"></div>
 							<h5>CFO</h5>
 							<p>Person 2</p>
 						</div>
-						<div class="postCollumn">
-							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar2.png" id="profilePicture"></div>
+						<div class="postCollumn3">
+							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar1.png" id="profilePicture"></div>
 							<h5>CTO</h5>
 							<p>Person 3</p>
 						</div>
 				</div>
 				<div class="postColContainer">
-						<div class="postCollumn">
-							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar.png" id="profilePicture"></div>
+						<div class="postCollumn3">
+							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar3.png" id="profilePicture"></div>
 							<h5>Technical Manager</h5>
 							<p>Person 4</p>
 						</div>
-						<div class="postCollumn">
-						<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar2.png" id="profilePicture"></div>
+						<div class="postCollumn3">
+						<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar4.png" id="profilePicture"></div>
 							<h5>Head of Sales</h5>
 							<p>Person 5</p>
 						</div>
-						<div class="postCollumn">
+						<div class="postCollumn3">
 							<div class="sociallink"><img src="<?php print($sitePath)?>images/profiles/avatar.png" id="profilePicture"></div>
 							<h5>Customer Relantions</h5>
 							<p>Person 6</p>

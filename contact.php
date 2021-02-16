@@ -35,18 +35,18 @@ $result = $conn->query($sql);
  	 				<iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=University%20of%20Derby,%20Kedleston%20Road,%20Derby,%20DE22%201GB+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
 				<div class="postColContainer">
-					<div class="postCollumn">
+					<div class="postCollumn3">
 						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/mappin.png" height="35"></div>
 						<p>University of Derby<br>
 						Kedleston Rd<br>
 						Derby DE22 1GB</p>
 					</div>
-					<div class="postCollumn">
+					<div class="postCollumn3">
 						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/phone.png" height="35"></div>
 						<p>01332 123456<br>
 						071234567</p>
 					</div>
-					<div class="postCollumn">
+					<div class="postCollumn3">
 						<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/email.png" height="35"></div>
 						<p>hello@company.tld<br>
 						sales@company.tld</p>

@@ -19,6 +19,7 @@
 	background-color: #f1f1f1;
 	width: 100%;
 	border: 2px solid black;
+	overflow: hidden;
 }
 .footerContainer {
 	height: 200px;
@@ -240,7 +241,7 @@ a:link {
 	width: 100%;
 	bottom-padding: 10px;
 }
-.postCollumn{
+.postCollumn3{
 	width: 33.33%;
 	float: left;
 	padding-top: 20px;
@@ -248,8 +249,18 @@ a:link {
 	padding-right: 20px;
 	text-align: center;
 }
+.postCollumn2{
+	width: 50%;
+	height: 315px;
+	float: left;
+	position:relative;
+	text-align: center;
+}
 #profilePicture {
 	border-radius: 50%;
 	border: #111 1px;
 	width: 200px;
+  }
+  .vcenter{
+	  padding-top:10%;
   }
