@@ -65,7 +65,7 @@ $result = $conn->query($sql);
 				<div class="postColContainer">
 					<div class="postCollumn2  vcenter">
 						<h4>Turbo Cycle</h4>
-						<p>Build using our world famous Encabulator!</p>
+						<p>Built using our world famous Encabulator!</p>
 					</div>
 					<div class="postCollumn2">
 					<model-viewer src="<?php print($sitePath)?>images/TheRocket.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
