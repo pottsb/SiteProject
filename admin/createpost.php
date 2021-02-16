@@ -2,8 +2,6 @@
 include "../conf/sqlconf.php";
 include "../conf/mainconf.php";
 $mydate=getdate();
-
-
 ?>
 <html>
 <head>
@@ -11,9 +9,9 @@ $mydate=getdate();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	<link rel='shortcut icon' type='image/x-icon' href='<?php print($sitePath)?>favicon.ico' />
 	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="<?php print($sitePath)?>style/style.css">
 	
 </head>
 <body>
@@ -28,7 +26,7 @@ $mydate=getdate();
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
 			
-				<div class="createPostFormContainer">
+				<div class="contentInnerContainer">
 				<h2>Create Post</h2>
 					<form action="forminput/createpost.php" method="post" target="_self">
 					Title:<br>
@@ -38,11 +36,8 @@ $mydate=getdate();
 						<span class="input-group-text"><?php print($sitePath)?></span>
 						<input type="text" name="imgurl" class="form-control">
 					</div>
-					
 					Post:<br>
 					<textarea name="message" class="form-control" rows="20"></textarea><br>
-					
-					
 					<div class="createPostFormCol">
 						Author: <input type="text" class="form-control" name="author">
 					</div>

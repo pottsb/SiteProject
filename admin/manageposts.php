@@ -10,9 +10,9 @@ $result = $conn->query($sql);
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	<link rel='shortcut icon' type='image/x-icon' href='<?php print($sitePath)?>favicon.ico' />
 	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="<?php print($sitePath)?>style/style.css">
 	
 </head>
 <body>
@@ -54,8 +54,7 @@ $result = $conn->query($sql);
 											<td>'. $row["author"].' </td>
 											<td>'. $row["date"].' </td>
 											<td><form action="editpost.php" method="post"><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Edit"></form></td>
-											<td><form action="forminput/deletepost.php" method="post" ><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Delete">
-											</form></td>
+											<td><form action="forminput/deletepost.php" method="post" onsubmit="return confirm(\'Are you sure you want to delete this post?\');"><input type="hidden" name="postid" value="'.$row["id"].'"><input type="submit" value="Delete"></form></td>
 										</tr>
 							';
 						}

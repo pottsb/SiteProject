@@ -5,13 +5,14 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-3.4.1-dist/css/bootstrap.min.css" >
+	<link rel='shortcut icon' type='image/x-icon' href='<?php print($sitePath)?>favicon.ico' />
+	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="<?php print($sitePath)?>style/style.css">
 	
 </head>
 <body>
 <script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
+<script src="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
 <script src="<?php print($sitePath)?>js/hideWidgets.js"></script>
 <script src="<?php print($sitePath)?>js/index.js"></script>
 	<div class="mainContainer">
@@ -20,22 +21,26 @@
 		<div class="bodyContainer">
 			<?php include "../../includes/widgets.php" ?>
 			<div class="contentContainer">
-				<?
-				include "../../conf/sqlconf.php";
-				$imgurl = $_POST["imgurl"] ?? 'null';
+				<div class="contentInnerContainer">
+					<?
+					include "../../conf/sqlconf.php";
+					$imgurl = $_POST["imgurl"] ?? 'null';
 
-				$sql ="update posts set title='$_POST[title]', imgurl='$imgurl', message='$_POST[message]', author='$_POST[author]', date ='$_POST[date]' where id='$_POST[postid]' ";
+					$sql ="update posts set title='$_POST[title]', imgurl='$imgurl', message='$_POST[message]', author='$_POST[author]', date ='$_POST[date]' where id='$_POST[postid]' ";
 
-				if ($conn->query($sql) === TRUE) {
-				  echo "Post edited successfully";
-				} else {
-				  echo "Error: " . $sql . "<br>" . $conn->error;
-				}
+					if ($conn->query($sql) === TRUE) {
+					echo"<h3>Post edited successfully.</h3>";
+					echo'<p>You will be redirected in <span id="counter">2</span> second(s).</p>';
+					} else {
+					echo "Error: " . $sql . "<br>" . $conn->error;
+					}
 
-				$conn->close();
+					$conn->close();
 
 
-				?>			
+					?>
+					<script src="<?php print($sitePath)?>js/adminredirect.js"></script>
+					</div>
 			</div>
 		</div>
 		<?php include "../../includes/footer.php" ?>

@@ -11,13 +11,13 @@ $result = $conn->query($sql);
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
-	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
+	<link rel="stylesheet" href="libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
 	<link rel="stylesheet" href="style/style.css">
 	
 </head>
 <body>
-<script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
-<script src="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
+<script src="libs/jquery-3.5.1.min.js" ></script>
+<script src="libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
 <script src="js/index.js"></script>
 	<div class="mainContainer">
 		<?php include "includes/header.php" ?>
@@ -39,7 +39,6 @@ $result = $conn->query($sql);
 			<?php include "includes/widgets.php" ?>
 			<div class="contentContainer">
 				<?
-				
 				$rownum = 0;
 				$pagenum = isset($_GET["page"]) ? $_GET["page"] : 1;
 				$postnumstart = (($pagenum * $postsperpage) - $postsperpage);

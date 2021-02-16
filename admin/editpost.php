@@ -3,9 +3,7 @@ include "../conf/sqlconf.php";
 include "../conf/mainconf.php";
 $sql = "SELECT title, imgurl, message, author, date from posts where id='$_POST[postid]'";
 $result = $conn->query($sql);
-
 $mydate=getdate();
-
 $row = $result->fetch_assoc();
 ?>
 <html>
@@ -14,9 +12,9 @@ $row = $result->fetch_assoc();
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+	<link rel='shortcut icon' type='image/x-icon' href='<?php print($sitePath)?>favicon.ico' />
 	<link rel="stylesheet" href="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css" >
-	<link rel="stylesheet" href="../style/style.css">
+	<link rel="stylesheet" href="<?php print($sitePath)?>style/style.css">
 	
 </head>
 <body>
@@ -31,7 +29,7 @@ $row = $result->fetch_assoc();
 			<?php include "../includes/widgets.php" ?>
 			<div class="contentContainer">
 			
-				<div class="createPostFormContainer">
+				<div class="contentInnerContainer">
 				<h2>Edit Post</h2>
 					<form action="forminput/editpost.php" method="post" target="_self">
 					Title:<br>
