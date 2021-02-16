@@ -6,7 +6,7 @@ $result = $conn->query($sql);
 ?>
 <html>
 <head>
-	<title>Contact</title>
+	<title>Products</title>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,6 +18,7 @@ $result = $conn->query($sql);
 <body>
 <script src="<?php print($sitePath)?>libs/jquery-3.5.1.min.js" ></script>
 <script src="<?php print($sitePath)?>libs/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js" ></script>
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <script src="<?php print($sitePath)?>js/hideWidgets.js"></script>
 <script src="<?php print($sitePath)?>js/index.js"></script>
 <script src="js/index.js"></script>
@@ -59,6 +60,15 @@ $result = $conn->query($sql);
 					<div class="postCollumn2 vcenter">
 						<h4>Turbo Encabulator</h4>
 						<p>It's so good!!</p>
+					</div>
+				</div>
+				<div class="postColContainer">
+					<div class="postCollumn2  vcenter">
+						<h4>Turbo Cycle</h4>
+						<p>Build using our world famous Encabulator!</p>
+					</div>
+					<div class="postCollumn2">
+					<model-viewer src="<?php print($sitePath)?>images/TheRocket.glb" alt="A 3D model of an astronaut" auto-rotate camera-controls></model-viewer>
 					</div>
 				</div>					
 			</div>	
