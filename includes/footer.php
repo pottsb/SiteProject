@@ -2,7 +2,7 @@
 <div class="footerCollumn">
 <h3>Chat with us</h3>
 
-<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/linkedin.png" height="35">&nbsp;<a href="#">linked In</a></div>
+<div class="sociallink"><img src="<?php print($sitePath)?>images/icons/linkedin.png" height="35">&nbsp;<a href="#">linkedIn</a></div>
 <div class="sociallink"><img src="<?php print($sitePath)?>images/icons/twitter.png" height="35">&nbsp;<a href="#">Twitter</a></div>
 <div class="sociallink"><img src="<?php print($sitePath)?>images/icons/reddit.png" height="35">&nbsp;<a href="#">Reddit</a></div>
 
