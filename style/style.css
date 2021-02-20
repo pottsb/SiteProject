@@ -19,7 +19,7 @@
 	background-color: #f1f1f1;
 	width: 100%;
 	border: 2px solid black;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 .footerContainer {
 	height: 200px;
@@ -251,7 +251,7 @@ a:link {
 }
 .contentCollumn2{
 	width: 50%;
-	height: 315px;
+	min-height: 315px;
 	float: left;
 	position:relative;
 	text-align: center;
@@ -259,16 +259,35 @@ a:link {
 #profilePicture {
 	border-radius: 50%;
 	border: #111 1px;
-	width: 200px;
+	width: 100%;
   }
-  .vcenter{
-	  padding-top:10%;
-  }
-  model-viewer {
+.vcenter{
+  padding-top:10%;
+}
+model-viewer {
     width: 100%;
     height: 100%;
     outline: none;
 }
 .map-container{
 	height: 300px
+}
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+  }
+
+.ordertotal h6{
+	margin-bottom: 0;
+    margin-top: .5rem;
+}
+.redtext{
+	color: red;
+}
+.productcol{
+	height:315px;
+}
+.nooverflow{
+	overflow:hidden;
 }

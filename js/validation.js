@@ -10,9 +10,7 @@
         Array.prototype.slice.call(forms)
           .forEach(function (form) {
             form.addEventListener('submit', function (event) {
-              console.log("1")
               if (!form.checkValidity()) {
-                console.log("2")
                 event.preventDefault()
                 event.stopPropagation()
               }
