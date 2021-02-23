@@ -8,12 +8,4 @@
 			<P><b>Thank you</b> for your <u>patience</u> while we add <i>information</i> and get <i>features working.</i></p>
 		</div>
 	</div>
-	<div class="widget">
-		<div class ="widgetHeader">
-			<h4>Debug Info</h4>
-		</div>
-		<div class ="widgetContent">
-			<P><?php print($sitePath)?></p>
-		</div>
-	</div>
 </div>

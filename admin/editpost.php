@@ -33,7 +33,7 @@ $row = $result->fetch_assoc();
 				<h2>Edit Post</h2>
 					<form action="forminput/editpost.php" method="post" target="_self">
 					Title:<br>
-					<input type="text" name="title" class="form-control" size="97" value ="<?echo $row["title"];?>">
+					<input type="text" name="title" class="form-control" size="97" value ="<?echo htmlspecialchars($row["title"]);?>">
 					Image URL:<br>
 					<div class="input-group">
 						<span class="input-group-text"><?php print($sitePath)?></span>
@@ -45,7 +45,7 @@ $row = $result->fetch_assoc();
 
 
 					<div class="createPostFormCol">
-						Author: <input type="text" class="form-control" name="author" value ="<?echo $row["author"];?>">
+						Author: <input type="text" class="form-control" name="author" value ="<?echo htmlspecialchars($row["author"]);?>">
 					</div>
 					<div class="createPostFormCol">
 						Date: <input type="text" class="form-control" name="date" value ="<?echo $row["date"];?>">

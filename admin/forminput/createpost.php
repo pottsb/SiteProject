@@ -27,7 +27,7 @@
 					$imgurl = $_POST["imgurl"] ?? 'null';
 
 					$sql = "INSERT INTO posts (title, imgurl, message, author, date)
-					VALUES ('$_POST[title]', '$imgurl', '$_POST[message]', '$_POST[author]', '$_POST[date]')";
+					VALUES ('". addslashes($_POST["title"]) ."', '$imgurl', '". addslashes($_POST["message"]) ."', '". addslashes($_POST["author"]) ."', '$_POST[date]')";
 
 					if ($conn->query($sql) === TRUE) {
 					echo "<h3>Post created successfully.</h3>";

@@ -26,7 +26,7 @@
 					include "../../conf/sqlconf.php";
 					$imgurl = $_POST["imgurl"] ?? 'null';
 
-					$sql ="update posts set title='$_POST[title]', imgurl='$imgurl', message='$_POST[message]', author='$_POST[author]', date ='$_POST[date]' where id='$_POST[postid]' ";
+					$sql ="update posts set title='". addslashes($_POST["title"]) ."', imgurl='$imgurl', message='". addslashes($_POST["message"]) ."', author='". addslashes("$_POST[author]") ."', date ='$_POST[date]' where id='$_POST[postid]' ";
 
 					if ($conn->query($sql) === TRUE) {
 					echo"<h3>Post edited successfully.</h3>";
